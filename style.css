@@ -1,0 +1,374 @@
+body {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    background-image: url("Images/bg.png");
+    background-size: auto 100vh;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    --primary-bg-color: #222326;
+    --primary-bg-color-alt: #333437;
+    --secondary-bg-color: #000;
+    --primary-style-color: #1db954;
+    --primary-color: #ffffff;
+}
+
+/* SEARCH BAR - VERY HAPPY */
+
+#SearchBar {
+    display: block;
+    margin: auto;
+    margin-top: 5vh;
+    border-style: hidden;
+    border-radius: 50px;
+    background-color: #282A4F;
+    width: 0vw;
+    height: 0vh;
+    transition: all 0.5s;
+}
+
+#SearchBar:focus-within {
+    width: 19vw;
+    height: 5vh;
+    background-color: #303452;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s;
+}
+
+#RealBar {
+    display: block;
+    margin: auto;
+    color: #917A8C;
+    border-style: hidden;
+    text-align: center;
+    background-color: #282A4F;
+    width: 0vw;
+    height: 0vh;
+    transition: all 0.5s;
+}
+
+#RealBar:focus {
+    width: 17vw;
+    height: 5vh;
+    background-color: #303452;
+    transition: all 0.5s;
+}
+
+/* NAV BAR - IN DEVELOPMENT - HAPPY, NEEDS MORE POP */
+
+#NavBarImg {
+    position: absolute;
+    background-color: white;
+    opacity: 25%;
+    left: -5vw;
+    width: 8vw;
+    height: 82vh;
+    padding-right: 2vh;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.5s;
+}
+
+#NavBar {
+    position: absolute;
+    left: -2vw;
+    width: 5vw;
+    height: 80vh;
+    transition: all 0.5s;
+}
+
+#NavBarImg.left {
+    left: -8vw;
+    transition: all 0.5s;
+}
+
+#NavBar.left {
+    left: -5vw;
+    transition: all 0.5s;
+}
+
+.NavElement {
+    margin-top: 2vh;
+    width: 6vw;
+    height: 3vw;
+    transition: all 0.5s;
+}
+
+.NavElement:hover {
+    margin-left: 2vw;
+    width:4vw;
+    transition: all 0.2s;
+}
+
+#NavBar .Website {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    border-style: none;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.Knob {
+    height: 5vh;
+    width: 3vh;
+    border: none;
+    background-color: gray;
+    opacity: 50%;
+    margin-left: 2vh;
+    border-radius: 0 50% 50% 0;
+    cursor: pointer;
+}
+
+#YouTube {
+    background-image: url("Images/YT pic.jpg");
+}
+
+#OSRSWiki {
+    background-image: url("Images/OSRS pic.png");
+}
+
+#StackOverflow {
+    background-image: url("Images/SO pic.png");
+}
+
+#GitHub {
+    background-image: url("Images/GH pic.jpg");
+}
+
+#Netflix {
+    background-image: url("Images/NX pic.jpg");
+}
+
+#Wikipedia {
+    background-image: url("Images/WK pic.jpg");
+}
+
+#Reddit {
+    background-image: url("Images/RD pic.jpg");
+}
+
+#Amazon {
+    background-image: url("Images/AZ pic.jpg");
+}
+
+#BBC {
+    background-image: url("Images/BC pic.jpg");
+}
+
+#Linkedin {
+    background-image: url("Images/LK pic.png");
+}
+
+#Close {
+    position: absolute;
+    top:50%;
+    left: 5vw;
+}
+
+/* HELL CSS */
+
+
+#MusicClose {
+    position: absolute;
+    top: -3vh;
+    left: calc(50% - 2.5vh);
+}
+
+.TopKnob {
+    position: absolute;
+    height: 3vh;
+    width: 5vh;
+    border: none;
+    background-color: black;
+    opacity: 100%;
+    border-radius: 50% 50% 0 0;
+    cursor: pointer;
+}
+
+#player {
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    right: 2vw;
+    width: 20vw;
+    height: 12.5vh;
+    padding: 10px;
+    display: flex;
+    opacity: 50%;
+    justify-content: center;
+    border-radius: 50px 50px 0 0;
+    transition: all 0.5s;
+}
+
+#player.hide {
+    bottom: -13.5vh;
+    transition: all 0.5s;
+}
+  
+#currentSong {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 250px;
+    height: 80px;
+}
+
+#albumCover {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#songName {
+    color: white;
+    position: absolute;
+    left: 1.5vw;
+    top: 0;
+}
+
+#artist {
+    color: white;
+    position: absolute;
+    left: 1.5vw;
+    top: 4ch;
+}
+
+#progressBox {
+    position: absolute;
+    width: 307.2px;
+    top: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#songProgress {
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    top: 7px;
+    height: 5px;
+    border: none;
+    border-radius: 100px;
+    right: -5px;
+    width: 200px;
+}
+
+#songProgress::-moz-progress-bar {
+    background-color: var(--primary-style-color);
+}
+
+#fauxBar {
+    z-index: 10;
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    top: 7px;
+    height: 5px;
+    border: none;
+    border-radius: 100px;
+    right: -5px;
+    width: 200px;
+    opacity: 0.3;
+    cursor: grab;
+}
+
+#fauxBar::-moz-progress-bar {
+    background-color: var(--primary-style-color);
+}
+
+#volume {
+    position: absolute;
+    width: 245px;
+    top: 7vh;
+    height: 40px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#volSign {
+    position: absolute;
+    color: var(--primary-style-color);
+    font-size: 1rem;
+    left: 8%;
+    top: 30%;
+}
+
+#songVolume {
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    height: 5px;
+    top: 21px;
+    right: 0;
+    border: none;
+    border-radius: 100px;
+    width: 200px;
+}
+
+#songVolume::-moz-progress-bar {
+    background-color: var(--primary-style-color);
+}
+
+#fauxVolume {
+    z-index: 10;
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    height: 5px;
+    top: 21px;
+    right: 0;
+    border: none;
+    border-radius: 100px;
+    width: 200px;
+    opacity: 0.3;
+    cursor: grab;
+}
+
+#fauxVolume::-moz-progress-bar {
+    background-color: var(--primary-style-color);
+}
+
+#timerText {
+    color: white;
+    padding-top: 18px;
+    margin-left: 120px;
+}
+
+#navButtons {
+    position: absolute;
+    margin: auto;
+    width: 10rem;
+    bottom: 3.5vh;
+    left: 1vw;
+}
+
+#navButtons button {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-style-color);
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+#navButtons button:hover {
+    background-color: var(--primary-bg-color-alt);
+    transition: 0.2s;
+}
+
+/* Stolen bit below here */
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}

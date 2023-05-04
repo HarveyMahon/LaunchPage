@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome Home</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://sdk.scdn.co/spotify-player.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="SearchBar">
+            <input id="RealBar" class="noSelect" onfocus="this.value=''" type="search">
+        </div>
+        <div id="NavBarImg" class="left"></div>
+        <div id="NavBar" class="left">
+            <div class="NavElement">
+                <button id="StackOverflow" class="Website" onclick="openLink('https://stackoverflow.com/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="GitHub" class="Website" onclick="openLink('https://github.com/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="Reddit" class="Website" onclick="openLink('https://www.reddit.com/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="YouTube" class="Website" onclick="openLink('https://www.youtube.com/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="Netflix" class="Website" onclick="openLink('https://www.netflix.com/gb/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="OSRSWiki" class="Website" onclick="openLink('https://oldschool.runescape.wiki/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="Wikipedia" class="Website" onclick="openLink('https://en.wikipedia.org/wiki/Main_Page')"></button>
+            </div><!--CAN FIT ABOUT 3 MORE-->
+            <div class="NavElement">
+                <button id="Amazon" class="Website" onclick="openLink('https://www.amazon.co.uk/')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="BBC" class="Website" onclick="openLink('https://www.bbc.co.uk/news')"></button>
+            </div>
+            <div class="NavElement">
+                <button id="Linkedin" class="Website" onclick="openLink('https://www.linkedin.com/feed/')"></button>
+            </div>
+            <button id="Close" class="Knob" onclick="ToggleWithin()"></button>
+        </div>
+        <div id="player" class="hide">
+            <button id="MusicClose" class="TopKnob" onclick="ToggleWithinMusic()"></button>
+            <div id="currentSong">
+              <a id="songName">Test Song</a>
+              <br>
+              <a id="artist">Test Artist</a>
+            </div>
+            <div id="progressBox">
+              <progress id="songProgress" max="100" value="0"></progress>
+              <progress id="fauxBar" max="100" value="50" style="visibility: hidden;"></progress>
+              <a id="timerText"><span id="position">0:00</span>/<span id="duration">0:00</span></a>
+            </div>
+            <div id="navButtons">
+              <button id="back">⏮</button>
+              <button id="togglePlay">▶</button>
+              <button id="next">⏭</button>
+            </div>
+            <div id="volume">
+              <a id="volSign">🔊</a>
+              <progress id="songVolume" max="100" value="0"></progress>
+              <progress id="fauxVolume" max="100" value="50" style="visibility: hidden;"></progress>
+            </div>
+          </div>
+    </body>
+</html>
