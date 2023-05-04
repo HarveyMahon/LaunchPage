@@ -195,9 +195,10 @@ window.onkeyup = function(event) {
 
 function openLink(link) {
     window.open(link);
+    ToggleNavBar();
 }
 
-function ToggleWithin() {
+function ToggleNavBar() {
     document.getElementById("NavBar").classList.toggle("left")
     document.getElementById("NavBarImg").classList.toggle("left")
 }
